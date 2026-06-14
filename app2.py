@@ -97,7 +97,7 @@ col1, col2 = st.columns(2)
 
 with col1:
     
-     branch_options = {
+         branch_options = {
         "Computer Science Engineering (CSE)": 0,
         "Information Technology (IT)": 1,
         "Electronics & Communication (ECE)": 2,
@@ -106,7 +106,7 @@ with col1:
         "Civil Engineering": 5,
         "Other Branch": 6
     }
-
+    
     selected_branch = st.selectbox(
         "Branch",
         list(branch_options.keys())
