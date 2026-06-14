@@ -96,56 +96,57 @@ st.header("📋 Student Profile")
 col1, col2 = st.columns(2)
 
 with col1:
+    
      branch_options = {
-    "Computer Science Engineering (CSE)": 0,
-    "Information Technology (IT)": 1,
-    "Electronics & Communication (ECE)": 2,
-    "Electrical Engineering (EEE)": 3,
-    "Mechanical Engineering": 4,
-    "Civil Engineering": 5,
-    "Other Branch": 6
-}
+        "Computer Science Engineering (CSE)": 0,
+        "Information Technology (IT)": 1,
+        "Electronics & Communication (ECE)": 2,
+        "Electrical Engineering (EEE)": 3,
+        "Mechanical Engineering": 4,
+        "Civil Engineering": 5,
+        "Other Branch": 6
+    }
 
-selected_branch = st.selectbox(
-    "Branch",
-    list(branch_options.keys())
-)
-
-branch = branch_options[selected_branch]
-
-college_tier = st.selectbox(
-        "College Tier",
-        [0, 1, 2],
-        format_func=lambda x: f"Tier {x+1}"
+    selected_branch = st.selectbox(
+        "Branch",
+        list(branch_options.keys())
     )
-
-cgpa = st.slider(
-        "CGPA",
-        0.0,
-        10.0,
-        7.0
-    )
-
-backlogs = st.number_input(
-        "Backlogs",
-        min_value=0,
-        max_value=20,
-        value=0
-    )
-
-internships = st.number_input(
-        "Internships",
-        min_value=0,
-        max_value=20,
-        value=1
-    )
-
-projects_count = st.number_input(
-        "Projects",
-        min_value=0,
-        max_value=50,
-        value=2
-    )
+    
+    branch = branch_options[selected_branch]
+    
+    college_tier = st.selectbox(
+            "College Tier",
+            [0, 1, 2],
+            format_func=lambda x: f"Tier {x+1}"
+        )
+    
+    cgpa = st.slider(
+            "CGPA",
+            0.0,
+            10.0,
+            7.0
+        )
+    
+    backlogs = st.number_input(
+            "Backlogs",
+            min_value=0,
+            max_value=20,
+            value=0
+        )
+    
+    internships = st.number_input(
+            "Internships",
+            min_value=0,
+            max_value=20,
+            value=1
+        )
+    
+    projects_count = st.number_input(
+            "Projects",
+            min_value=0,
+            max_value=50,
+            value=2
+        )
 
 with col2:
 
