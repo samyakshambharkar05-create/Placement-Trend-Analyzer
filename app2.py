@@ -96,7 +96,6 @@ st.header("📋 Student Profile")
 col1, col2 = st.columns(2)
 
 with col1:
-
 branch_options = {
     "Computer Science Engineering (CSE)": 0,
     "Information Technology (IT)": 1,
