@@ -97,11 +97,22 @@ col1, col2 = st.columns(2)
 
 with col1:
 
-    branch = st.selectbox(
-        "Branch",
-        [0, 1, 2, 3, 4, 5, 6],
-        format_func=lambda x: f"Branch {x}"
-    )
+branch_options = {
+    "Computer Science Engineering (CSE)": 0,
+    "Information Technology (IT)": 1,
+    "Electronics & Communication (ECE)": 2,
+    "Electrical Engineering (EEE)": 3,
+    "Mechanical Engineering": 4,
+    "Civil Engineering": 5,
+    "Other Branch": 6
+}
+
+selected_branch = st.selectbox(
+    "Branch",
+    list(branch_options.keys())
+)
+
+branch = branch_options[selected_branch]
 
     college_tier = st.selectbox(
         "College Tier",
