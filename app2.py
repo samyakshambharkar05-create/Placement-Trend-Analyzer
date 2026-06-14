@@ -113,34 +113,34 @@ selected_branch = st.selectbox(
 
 branch = branch_options[selected_branch]
 
-    college_tier = st.selectbox(
+college_tier = st.selectbox(
         "College Tier",
         [0, 1, 2],
         format_func=lambda x: f"Tier {x+1}"
     )
 
-    cgpa = st.slider(
+cgpa = st.slider(
         "CGPA",
         0.0,
         10.0,
         7.0
     )
 
-    backlogs = st.number_input(
+backlogs = st.number_input(
         "Backlogs",
         min_value=0,
         max_value=20,
         value=0
     )
 
-    internships = st.number_input(
+internships = st.number_input(
         "Internships",
         min_value=0,
         max_value=20,
         value=1
     )
 
-    projects_count = st.number_input(
+projects_count = st.number_input(
         "Projects",
         min_value=0,
         max_value=50,
